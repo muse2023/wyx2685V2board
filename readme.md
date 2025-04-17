@@ -31,8 +31,6 @@
 - Redis
 - Laravel
 
-## Demo
-[Demo](https://demo.v2board.com)
 
 ## Document
 [Click](https://v2board.com)
