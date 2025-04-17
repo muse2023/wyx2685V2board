@@ -2,6 +2,7 @@
 
 use App\Services\ThemeService;
 use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,15 +15,15 @@ use Illuminate\Http\Request;
 */
 //首页的路由并且自定义
 Route::get('/' . config('pricing'), function () {
-        return view('pricing', [
-        'title' => config('v2board.app_name', 'BigME'),
-        'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
-        'theme_header' => config('v2board.frontend_theme_header', 'dark'),
-        'theme_color' => config('v2board.frontend_theme_color', 'default'),
-        'background_url' => config('v2board.frontend_background_url'),
-        'version' => config('app.version'),
-        'logo' => config('v2board.logo')
-        ]);
+    return view('pricing', [
+    'title' => config('v2board.app_name', 'BigME'),
+    'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
+    'theme_header' => config('v2board.frontend_theme_header', 'dark'),
+    'theme_color' => config('v2board.frontend_theme_color', 'default'),
+    'background_url' => config('v2board.frontend_background_url'),
+    'version' => config('app.version'),
+    'logo' => config('v2board.logo')
+    ]);
 });
 
 //特性
@@ -54,43 +55,43 @@ Route::get('/' . config('pricing'), function () {
 
 //特别优惠
 Route::get('/special-offers' . config('special-offers'), function () {
-    return view('special-offers', [
-        'title' => config('v2board.app_name', 'BigME'),
-        'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
-        'theme_header' => config('v2board.frontend_theme_header', 'dark'),
-        'theme_color' => config('v2board.frontend_theme_color', 'default'),
-        'background_url' => config('v2board.frontend_background_url'),
-        'version' => config('app.version'),
-        'logo' => config('v2board.logo')
-    ]);
+return view('special-offers', [
+    'title' => config('v2board.app_name', 'BigME'),
+    'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
+    'theme_header' => config('v2board.frontend_theme_header', 'dark'),
+    'theme_color' => config('v2board.frontend_theme_color', 'default'),
+    'background_url' => config('v2board.frontend_background_url'),
+    'version' => config('app.version'),
+    'logo' => config('v2board.logo')
+]);
 });
 
 //使用条款
 Route::get('/aup' . config('aup'), function () {
-    return view('aup', [
-        'title' => config('v2board.app_name', 'BigME'),
-        'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
-        'theme_header' => config('v2board.frontend_theme_header', 'dark'),
-        'theme_color' => config('v2board.frontend_theme_color', 'default'),
-        'background_url' => config('v2board.frontend_background_url'),
-        'version' => config('app.version'),
-        'url' => config('v2board.app_url'),
-        'logo' => config('v2board.logo')
-    ]);
+return view('aup', [
+    'title' => config('v2board.app_name', 'BigME'),
+    'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
+    'theme_header' => config('v2board.frontend_theme_header', 'dark'),
+    'theme_color' => config('v2board.frontend_theme_color', 'default'),
+    'background_url' => config('v2board.frontend_background_url'),
+    'version' => config('app.version'),
+    'url' => config('v2board.app_url'),
+    'logo' => config('v2board.logo')
+]);
 });
 
 //服务水平保障
 Route::get('/sla' . config('sla'), function () {
-    return view('sla', [
-        'title' => config('v2board.app_name', 'BigME'),
-        'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
-        'theme_header' => config('v2board.frontend_theme_header', 'dark'),
-        'theme_color' => config('v2board.frontend_theme_color', 'default'),
-        'background_url' => config('v2board.frontend_background_url'),
-        'version' => config('app.version'),
-        'url' => config('v2board.app_url'),
-        'logo' => config('v2board.logo')
-    ]);
+return view('sla', [
+    'title' => config('v2board.app_name', 'BigME'),
+    'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
+    'theme_header' => config('v2board.frontend_theme_header', 'dark'),
+    'theme_color' => config('v2board.frontend_theme_color', 'default'),
+    'background_url' => config('v2board.frontend_background_url'),
+    'version' => config('app.version'),
+    'url' => config('v2board.app_url'),
+    'logo' => config('v2board.logo')
+]);
 });
 
 //兼容客户端
@@ -137,16 +138,16 @@ Route::get('/sla' . config('sla'), function () {
 
 //推荐计划
 Route::get('/referral-program' . config('referral-program'), function () {
-    return view('referral-program', [
-        'title' => config('v2board.app_name', 'BigME'),
-        'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
-        'theme_header' => config('v2board.frontend_theme_header', 'dark'),
-        'theme_color' => config('v2board.frontend_theme_color', 'default'),
-        'background_url' => config('v2board.frontend_background_url'),
-        'version' => config('app.version'),
-        'url' => config('v2board.app_url'),
-        'logo' => config('v2board.logo')
-    ]);
+return view('referral-program', [
+    'title' => config('v2board.app_name', 'BigME'),
+    'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
+    'theme_header' => config('v2board.frontend_theme_header', 'dark'),
+    'theme_color' => config('v2board.frontend_theme_color', 'default'),
+    'background_url' => config('v2board.frontend_background_url'),
+    'version' => config('app.version'),
+    'url' => config('v2board.app_url'),
+    'logo' => config('v2board.logo')
+]);
 });
 
 //视频创作者计划
@@ -165,33 +166,33 @@ Route::get('/referral-program' . config('referral-program'), function () {
 
 //问题和答案 就是faq
 Route::get('/faq' . config('faq'), function () {
-    return view('faq', [
-        'title' => config('v2board.app_name', 'BigME'),
-        'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
-        'theme_header' => config('v2board.frontend_theme_header', 'dark'),
-        'theme_color' => config('v2board.frontend_theme_color', 'default'),
-        'background_url' => config('v2board.frontend_background_url'),
-        'version' => config('app.version'),
-        'url' => config('v2board.app_url'),
-        'logo' => config('v2board.logo')
-    ]);
+return view('faq', [
+    'title' => config('v2board.app_name', 'BigME'),
+    'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
+    'theme_header' => config('v2board.frontend_theme_header', 'dark'),
+    'theme_color' => config('v2board.frontend_theme_color', 'default'),
+    'background_url' => config('v2board.frontend_background_url'),
+    'version' => config('app.version'),
+    'url' => config('v2board.app_url'),
+    'logo' => config('v2board.logo')
+]);
 });
 
 
 //联系我们 -- 要改下面的telegrampindao 和telegramqunliao 的url地址 就是引号内的
 Route::get('/contact-us' . config('contact-us'), function () {
-    return view('contact-us', [
-        'title' => config('v2board.app_name', 'BigME'),
-        'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
-        'theme_header' => config('v2board.frontend_theme_header', 'dark'),
-        'theme_color' => config('v2board.frontend_theme_color', 'default'),
-        'background_url' => config('v2board.frontend_background_url'),
-        'version' => config('app.version'),
-        'url' => config('v2board.app_url'),
-        'telegrampindao' => 'https://bit.ly/3AIUWem',
-        'telegramqunliao' => 'https://bit.ly/3z2efim',
-        'logo' => config('v2board.logo')
-    ]);
+return view('contact-us', [
+    'title' => config('v2board.app_name', 'BigME'),
+    'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
+    'theme_header' => config('v2board.frontend_theme_header', 'dark'),
+    'theme_color' => config('v2board.frontend_theme_color', 'default'),
+    'background_url' => config('v2board.frontend_background_url'),
+    'version' => config('app.version'),
+    'url' => config('v2board.app_url'),
+    'telegrampindao' => 'https://bit.ly/3AIUWem',
+    'telegramqunliao' => 'https://bit.ly/3z2efim',
+    'logo' => config('v2board.logo')
+]);
 });
 
 //关于我们
@@ -212,103 +213,106 @@ Route::get('/contact-us' . config('contact-us'), function () {
 
 //隐私政策
 Route::get('/privacy' . config('privacy'), function () {
-    return view('privacy', [
-        'title' => config('v2board.app_name', 'BigME'),
-        'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
-        'theme_header' => config('v2board.frontend_theme_header', 'dark'),
-        'theme_color' => config('v2board.frontend_theme_color', 'default'),
-        'background_url' => config('v2board.frontend_background_url'),
-        'version' => config('app.version'),
-        'url' => config('v2board.app_url'),
-        'telegrampindao' => 'https://bit.ly/3AIUWem',
-        'telegramqunliao' => 'https://bit.ly/3z2efim',
-        'logo' => config('v2board.logo')
-    ]);
+return view('privacy', [
+    'title' => config('v2board.app_name', 'BigME'),
+    'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
+    'theme_header' => config('v2board.frontend_theme_header', 'dark'),
+    'theme_color' => config('v2board.frontend_theme_color', 'default'),
+    'background_url' => config('v2board.frontend_background_url'),
+    'version' => config('app.version'),
+    'url' => config('v2board.app_url'),
+    'telegrampindao' => 'https://bit.ly/3AIUWem',
+    'telegramqunliao' => 'https://bit.ly/3z2efim',
+    'logo' => config('v2board.logo')
+]);
 });
 
 //服务条款
 Route::get('/tos' . config('tos'), function () {
-    return view('tos', [
-        'title' => config('v2board.app_name', 'BigME'),
-        'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
-        'theme_header' => config('v2board.frontend_theme_header', 'dark'),
-        'theme_color' => config('v2board.frontend_theme_color', 'default'),
-        'background_url' => config('v2board.frontend_background_url'),
-        'version' => config('app.version'),
-        'url' => config('v2board.app_url'),
-        'telegrampindao' => 'https://bit.ly/3AIUWem',
-        'telegramqunliao' => 'https://bit.ly/3z2efim',
-        'logo' => config('v2board.logo')
-    ]);
+return view('tos', [
+    'title' => config('v2board.app_name', 'BigME'),
+    'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
+    'theme_header' => config('v2board.frontend_theme_header', 'dark'),
+    'theme_color' => config('v2board.frontend_theme_color', 'default'),
+    'background_url' => config('v2board.frontend_background_url'),
+    'version' => config('app.version'),
+    'url' => config('v2board.app_url'),
+    'telegrampindao' => 'https://bit.ly/3AIUWem',
+    'telegramqunliao' => 'https://bit.ly/3z2efim',
+    'logo' => config('v2board.logo')
+]);
 });
 
 //通用数据保护条例
 Route::get('/gdpr' . config('gdpr'), function () {
-    return view('gdpr', [
-        'title' => config('v2board.app_name', 'BigME'),
-        'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
-        'theme_header' => config('v2board.frontend_theme_header', 'dark'),
-        'theme_color' => config('v2board.frontend_theme_color', 'default'),
-        'background_url' => config('v2board.frontend_background_url'),
-        'version' => config('app.version'),
-        'url' => config('v2board.app_url'),
-        'telegrampindao' => 'https://bit.ly/3AIUWem',
-        'telegramqunliao' => 'https://bit.ly/3z2efim',
-        'logo' => config('v2board.logo')
-    ]);
+return view('gdpr', [
+    'title' => config('v2board.app_name', 'BigME'),
+    'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
+    'theme_header' => config('v2board.frontend_theme_header', 'dark'),
+    'theme_color' => config('v2board.frontend_theme_color', 'default'),
+    'background_url' => config('v2board.frontend_background_url'),
+    'version' => config('app.version'),
+    'url' => config('v2board.app_url'),
+    'telegrampindao' => 'https://bit.ly/3AIUWem',
+    'telegramqunliao' => 'https://bit.ly/3z2efim',
+    'logo' => config('v2board.logo')
+]);
 });
 
 //服务特定条款
 Route::get('/service-terms' . config('service-terms'), function () {
-    return view('service-terms', [
-        'title' => config('v2board.app_name', 'BigME'),
+return view('service-terms', [
+    'title' => config('v2board.app_name', 'BigME'),
+    'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
+    'theme_header' => config('v2board.frontend_theme_header', 'dark'),
+    'theme_color' => config('v2board.frontend_theme_color', 'default'),
+    'background_url' => config('v2board.frontend_background_url'),
+    'version' => config('app.version'),
+    'url' => config('v2board.app_url'),
+    'telegrampindao' => 'https://bit.ly/3AIUWem',
+    'telegramqunliao' => 'https://bit.ly/3z2efim',
+    'logo' => config('v2board.logo')
+]);
+});
+
+Route::get('/user', function (Request $request) {
+    if (config('v2board.app_url') && config('v2board.safe_mode_enable', 0)) {
+        if ($request->server('HTTP_HOST') !== parse_url(config('v2board.app_url'))['host']) {
+            abort(403);
+        }
+    }
+    $renderParams = [
+        'title' => config('v2board.app_name', 'V2Board'),
+        'theme' => config('v2board.frontend_theme', 'default'),、
+        'theme_path' => '/theme/' . config('v2board.frontend_theme', 'v2board') . '/assets/',
+        'version' => config('app.version'),
+        'description' => config('v2board.app_description', 'V2Board is best'),
+        'logo' => config('v2board.logo')
+    ];
+
+    if (!config("theme.{$renderParams['theme']}")) {
+        $themeService = new ThemeService($renderParams['theme']);
+        $themeService->init();
+    }
+
+    $renderParams['theme_config'] = config('theme.' . config('v2board.frontend_theme', 'default'));
+    return view('theme::' . config('v2board.frontend_theme', 'default') . '.dashboard', $renderParams);
+});
+
+//TODO:: 兼容
+Route::get('/' . config('v2board.secure_path', config('v2board.frontend_admin_path', hash('crc32b', config('app.key')))), function () {
+    return view('admin', [
+        'title' => config('v2board.app_name', 'V2Board'),
         'theme_sidebar' => config('v2board.frontend_theme_sidebar', 'light'),
         'theme_header' => config('v2board.frontend_theme_header', 'dark'),
         'theme_color' => config('v2board.frontend_theme_color', 'default'),
         'background_url' => config('v2board.frontend_background_url'),
         'version' => config('app.version'),
-        'url' => config('v2board.app_url'),
-        'telegrampindao' => 'https://bit.ly/3AIUWem',
-        'telegramqunliao' => 'https://bit.ly/3z2efim',
-        'logo' => config('v2board.logo')
+        'logo' => config('v2board.logo'),
+        'secure_path' => config('v2board.secure_path', config('v2board.frontend_admin_path', hash('crc32b', config('app.key'))))
     ]);
 });
 
-Route::get('/user', function (Request $request) {
-    if (config('app_url') && config('safe_mode_enable', 0)) {
-        if ($request->server('HTTP_HOST') !== parse_url(config('app_url'))['host']) {
-            abort(403);
-        }
-    }
-    $renderParams = [
-        'title' => config('app_name', 'v2board'),
-        'theme' => config('frontend_theme', 'v2board'),
-        // 'theme_path' => '/theme/netsp/assets/',
-        'theme_path' => '/theme/' . config('frontend_theme', 'v2board') . '/assets/',         
-        'version' => config('app.version'),
-        'description' => config('app_description', 'v2board is best'),
-        'logo' => config('logo')
-    ];
-
-    if (!config("theme_{$renderParams['theme']}")) {
-        $themeService = new ThemeService($renderParams['theme']);
-        $themeService->init();
-    }
-
-    $renderParams['theme_config'] = config("theme_". config('frontend_theme', 'v2board')) ?? config('theme.' . config('frontend_theme', 'v2board'));
-    return view('theme::' . config('frontend_theme', 'v2board') . '.dashboard', $renderParams);
-});
-
-//TODO:: 兼容
-Route::get('/' . config('secure_path', config('frontend_admin_path', hash('crc32b', config('app.key')))), function () {
-    return view('admin', [
-        'title' => config('app_name', 'v2board'),
-        'theme_sidebar' => config('frontend_theme_sidebar', 'light'),
-        'theme_header' => config('frontend_theme_header', 'dark'),
-        'theme_color' => config('frontend_theme_color', 'default'),
-        'background_url' => config('frontend_background_url'),
-        'version' => config('app.version'),
-        'logo' => config('logo'),
-        'secure_path' => config('secure_path', config('frontend_admin_path', hash('crc32b', config('app.key'))))
-    ]);
-});
+if (!empty(config('v2board.subscribe_path'))) {
+    Route::get(config('v2board.subscribe_path'), 'V1\\Client\\ClientController@subscribe')->middleware('client');
+}
